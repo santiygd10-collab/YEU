@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Camaleones — Proyecto Secundaria</title>
+  <style>
+    :root{--accent:#2a9d8f;--muted:#6c757d;--bg:#f8f9fa}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; margin:0; background:var(--bg); color:#0f172a}
+    .wrap{max-width:900px;margin:28px auto;padding:22px;background:#fff;border-radius:12px;box-shadow:0 6px 20px rgba(6,9,14,0.06)}
+    header{display:flex;gap:18px;align-items:center}
+    .logo{width:84px;height:84px;border-radius:12px;overflow:hidden;flex:0 0 84px;background:linear-gradient(135deg,var(--accent),#1b6b62);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:1.6rem;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{background:#eef6f4;padding:8px 12px;border-radius:8px;color:var(--accent);text-decoration:none;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .card{background:#fff;padding:14px;border-radius:10px;border:1px solid #eef2f3}
+    img.responsive{width:100%;height:auto;border-radius:8px;display:block}
+    h2{margin-top:0}
+    ul{padding-left:1.1rem}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .fact{background:linear-gradient(90deg,#e6fffa,#f0fff9);padding:10px;border-radius:8px;margin:10px 0}
+    .quiz button{display:block;width:100%;padding:10px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:700;margin-top:8px}
+    footer{color:var(--muted);font-size:0.9rem;text-align:center;margin-top:18px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr} .logo{width:64px;height:64px;flex:0 0 64px}}
+    .accordion{border-top:1px dashed #e6eef0;padding-top:10px;margin-top:10px}
+    .btn-light{background:#f1f5f4;padding:8px 10px;border-radius:8px;border:0}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">C</div>
+      <div>
+        <h1>Camaleones: reptiles con superpoderes</h1>
+        <p class="lead">Una pagina informativa para secundaria: aprende sobre su forma de vida, adaptaciones y curiosidades.</p>
+        <nav aria-label="Secciones rapidas">
+          <a href="#que-es">Que es?</a>
+          <a href="#habitat">Habitat</a>
+          <a href="#alimentacion">Alimentacion</a>
+          <a href="#adaptaciones">Adaptaciones</a>
+          <a href="#quiz">Mini quiz</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="grid" aria-labelledby="principal">
+      <div>
+        <article class="card" id="que-es">
+          <h2 id="principal">Que es un camaleon?</h2>
+          <p class="muted">Los camaleones son un grupo de reptiles conocidos por su capacidad de cambiar de color, sus ojos independientes y su lengua larga y pegajosa. Hay alrededor de 200 especies distintas.</p>
+          <img class="responsive" src="https://images.unsplash.com/photo-1749999155074-76d45ff88a98?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Camaleon posado en una rama">
+          <div class="fact"><strong>Dato rapido:</strong> los camaleones no cambian de color solo para camuflarse: tambien lo hacen para regular la temperatura y comunicarse.</div>
+        </article>
+
+        <article class="card" id="habitat">
+          <h2>Habitat y distribucion</h2>
+          <p>La mayoria vive en Africa y Madagascar, pero tambien hay especies en Asia y Europa. Viven en bosques, sabanas y algunas especies en ambientes montañosos.</p>
+          <ul>
+            <li>Preferencia por arboles y arbustos (especies arboreas).</li>
+            <li>Algunas especies son terrestres y viven en matorrales.</li>
+            <li>Importancia del microclima: humedad y temperatura afectan su comportamiento.</li>
+          </ul>
+        </article>
+
+        <article class="card" id="alimentacion">
+          <h2>Alimentacion</h2>
+          <p class="muted">Son principalmente insectivoros: comen insectos como grillos, moscas y saltamontes. Algunas especies grandes pueden comer pequeños vertebrados.</p>
+          <ol>
+            <li>Detectan la presa con la vista.</li>
+            <li>Disparan la lengua con gran velocidad y pegajosidad.</li>
+            <li>La lengua puede ser mas larga que su propio cuerpo en algunas especies.</li>
+          </ol>
+        </article>
+
+        <article class="card" id="adaptaciones">
+          <h2>Adaptaciones asombrosas</h2>
+          <p>Estas adaptaciones les ayudan a sobrevivir en su entorno:</p>
+          <ul>
+            <li><strong>Ojos independientes:</strong> pueden mirar en dos direcciones a la vez.</li>
+            <li><strong>Color:</strong> sirven para comunicarse, regular temperatura y camuflaje.</li>
+            <li><strong>Pies prensiles:</strong> agarran ramas como manos.</li>
+            <li><strong>Cola prehensil:</strong> ayuda a mantener el equilibrio.</li>
+          </ul>
+          <div class="accordion">
+            <button class="btn-light" onclick="toggleInfo('more1')">Por que cambian de color?</button>
+            <div id="more1" style="display:none;margin-top:8px">Cambian el color mediante celulas especiales llamadas cromatoforos y otras capas de la piel que refractan la luz. El cambio no es instantaneo pero puede ser rapido cuando el animal esta excitado.</div>
+          </div>
+        </article>
+
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Ficha rapida</h3>
+          <p><strong>Clase:</strong> Reptilia<br><strong>Alimentacion:</strong> Insectivoro<br><strong>Longevidad:</strong> 3-10+ años segun la especie</p>
+          <h4>Especies conocidas</h4>
+          <ul>
+            <li>Camaleon pantera (<em>Furcifer pardalis</em>)</li>
+            <li>Camaleon comun (<em>Chamaeleo chamaeleon</em>)</li>
+            <li>Camaleon velado (<em>Chamaeleo calyptratus</em>)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Mini video (enlace)</h3>
+          <p class="muted">Puedes buscar videos cortos sobre camaleones para ver su lengua y color.</p>
+          <p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=camaleon+lengua" class="btn-light">Ver ejemplos en YouTube</a></p>
+        </div>
+
+        <div class="card quiz" id="quiz">
+          <h3>Mini quiz</h3>
+          <p>Comprueba lo que aprendiste (nivel secundaria):</p>
+          <label>1) Que usan los camaleones para atrapar insectos?</label>
+          <button onclick="answer('1','Lengua')">A) Lengua</button>
+          <button onclick="answer('1','Patas')">B) Patas</button>
+          <div id="res1" class="muted"></div>
+
+          <label style="margin-top:8px">2) Donde vive la mayoria de los camaleones?</label>
+          <button onclick="answer('2','Madagascar')">A) Madagascar y Asfrica</button>
+          <button onclick="answer('2','Antartida')">B) La Antartida</button>
+          <div id="res2" class="muted"></div>
+
+          <label style="margin-top:8px">3) Para que cambian de color?</label>
+          <button onclick="answer('3','Comunicacion')">A) Comunicacion y camuflaje</button>
+          <button onclick="answer('3','Dormir')">B) Para dormir</button>
+          <div id="res3" class="muted"></div>
+
+        </div>
+
+        <div class="card">
+          <h3>Actividad rapida</h3>
+          <p>Investiga una especie y escribe un parrafo que incluya: nombre cientifico, habitat y 2 curiosidades. Preparate para compartirlo en clase.</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>Creado por Santiago Yeudiel Gomez Diaz.</p>
+    </footer>
+  </main>
+
+  <script>
+    function answer(id, choice){
+      const correct = { '1':'Lengua', '2':'Madagascar', '3':'Comunicacion' };
+      const res = document.getElementById('res'+id);
+      if(choice === correct[id]){ res.textContent = '¡Correcto! ?'; res.style.color = 'green'; }
+      else{ res.textContent = 'No es correcto. Intenta de nuevo. ?'; res.style.color = 'crimson'; }
+    }
+    function toggleInfo(id){
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'none')? 'block':'none';
+    }
+  </script>
+</body>
+</html>
+
